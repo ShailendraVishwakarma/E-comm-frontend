@@ -12,7 +12,7 @@ const Nav=()=>{
     }
     return(
         <div>
-            <img src="https://yt3.googleusercontent.com/ytc/AGIKgqOpew-op5VY99ZRjdyeRUHl3HeeBJFV5hJ7gUo4TA=s900-c-k-c0x00ffffff-no-rj" alt="logo"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk3N6k_ldG7m9XVCoNfBrtEbqeGH5jAozqihxx_oBUcRzzLEUuRORfeCKXCnh9UxPme5U&usqp=CAU" alt="logo"
             className='logo' />
            { auth ? <ul className="nav-ul">
                 <li><Link to="/">Products</Link></li>
