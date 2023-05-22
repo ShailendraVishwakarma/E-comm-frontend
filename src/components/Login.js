@@ -13,7 +13,7 @@ const Login=()=>{
     })
     const handleLogin=async ()=>{
         console.warn(email,password);
-        let result = await fetch('http://localhost:5000/login', {
+        let result = await fetch('https://e-comm-dashboard-api.onrender.com/login', {
       method:'post',
       body:JSON.stringify({ email, password }),
       headers: {
@@ -29,7 +29,7 @@ const Login=()=>{
         navigate("/");
     }
     else{
-        alert("pleaae signup")
+        alert("please signup")
     }
     }
 

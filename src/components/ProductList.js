@@ -6,7 +6,7 @@ const ProductList = () => {
     getProduct();
   }, []);
   const getProduct = async () => {
-    let result = await fetch("http://localhost:5000/products",{
+    let result = await fetch("https://e-comm-dashboard-api.onrender.com/products",{
       headers:{
         authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
       }
@@ -15,7 +15,7 @@ const ProductList = () => {
     setProducts(result);
   };
   const deleteProduct=async (id)=>{
-    let result =await fetch(`http://localhost:5000/product/${id}`,{
+    let result =await fetch(`https://e-comm-dashboard-api.onrender.com/product/${id}`,{
       method:"Delete",
       headers:{
         authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -34,7 +34,7 @@ const ProductList = () => {
     // console.warn(event.target.value)
     let key=event.target.value; 
     if(key){
-      let result = await fetch(`http://localhost:5000/search/${key}`,{
+      let result = await fetch(`https://e-comm-dashboard-api.onrender.com/search/${key}`,{
         headers:{
           authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
         }
