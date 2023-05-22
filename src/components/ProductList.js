@@ -22,7 +22,8 @@ const ProductList = () => {
       }
       
     });
-    result= await result.json();
+    console.log(result);
+    // result= await result.json();
     if(result){
       
       getProduct();
