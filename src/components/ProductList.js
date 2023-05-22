@@ -15,7 +15,11 @@ const ProductList = () => {
     setProducts(result);
   };
   const deleteProduct=async (id)=>{
-    let result =await fetch(`https://e-comm-dashboard-api.onrender.com/product/${id}`,{
+    var res = window.confirm("Want to delete?");
+
+if (res) {
+
+let result =await fetch(`https://e-comm-dashboard-api.onrender.com/product/${id}`,{
       method:"Delete",
       headers:{
         authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -30,6 +34,9 @@ const ProductList = () => {
     }else{
       alert("not")
     }
+
+}
+    
   }
   const searchHandle=async(event)=>{
     // console.warn(event.target.value)
